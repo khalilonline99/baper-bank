@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="mt-4 mb-2">
+    <header class="mt-12 mb-8">
         <h1 class="text-4xl font-medium	text-center	">Welcome to your Bank Account</h1>
     </header>
     
@@ -16,20 +16,40 @@
         <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
             <div class="bg-green-600 rounded-lg p-2">
                 <h1 class="text-2xl">Deposit</h1>
-                <h1 class="text-5xl">$00</h1>
+                <h1 class="text-5xl">$ <span id="deposit-total-amount">00</span></h1>
             </div>
             <div class="bg-red-600 rounded-lg p-2">
                 <h1 class="text-2xl">Withdraw</h1>
                 <h1 class="text-5xl">$00</h1>
             </div>
-            <div class="bg-green-600 rounded-lg p-2">
+            <div class="bg-yellow-500 rounded-lg p-2">
                 <h1 class="text-2xl">Balance</h1>
                 <h1 class="text-5xl">$00</h1>
             </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto mt-5">
+            <div class="bg-sky-600 rounded-lg p-8">
+            <h2 class="text-white">Please deposite here</h2>
+            <input id="deposit-field" class="w-9/12 my-2 rounded p-1" type="text" placeholder="Your deposit">
+            <br>
+            <button id="btn-deposit" class="bg-stone-50 p-2 rounded hover:bg-yellow-500 hover:text-white">Deposit</button>
+            </div>
+
+            <div class="bg-orange-600 rounded-lg p-8">
+            <h2 class="text-white">Please Withdraw</h2>
+            <input id="withdraw-field" class="w-9/12 my-2 rounded p-1" type="text" placeholder="Your withdraw amount">
+            <br>
+            <button id="btn-withdraw" class="bg-stone-50 p-2 rounded hover:bg-yellow-500 hover:text-white">Withdraw</button>
+            </div>
+
+            
+
         </div>
     </section>
 
 
     <script src="js/login.js"></script>
+    <script src="js/balance.js"></script>
 </body>
 </html>
